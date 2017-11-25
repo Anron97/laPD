@@ -18,6 +18,7 @@ namespace DriversOnTheStorm
         public Form1()
         {
             InitializeComponent();
+            UpdateDeviceList();
         }
 
         private void UpdateDeviceList()

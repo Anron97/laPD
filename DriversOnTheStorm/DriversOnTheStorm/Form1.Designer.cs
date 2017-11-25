@@ -35,20 +35,23 @@
             // 
             // DeviceList
             // 
-            this.DeviceList.GridLines = true;
-            this.DeviceList.Location = new System.Drawing.Point(0, -1);
+            this.DeviceList.FullRowSelect = true;
+            this.DeviceList.Location = new System.Drawing.Point(0, 12);
+            this.DeviceList.MultiSelect = false;
             this.DeviceList.Name = "DeviceList";
-            this.DeviceList.Size = new System.Drawing.Size(473, 474);
-            this.DeviceList.TabIndex = 0;
+            this.DeviceList.Size = new System.Drawing.Size(478, 450);
+            this.DeviceList.TabIndex = 4;
+            this.DeviceList.TileSize = new System.Drawing.Size(470, 36);
             this.DeviceList.UseCompatibleStateImageBehavior = false;
+            this.DeviceList.View = System.Windows.Forms.View.Tile;
             this.DeviceList.MouseClick += new System.Windows.Forms.MouseEventHandler(this.DeviceList_MouseClick);
             // 
             // DeviceInfo
             // 
-            this.DeviceInfo.Location = new System.Drawing.Point(495, -1);
+            this.DeviceInfo.Location = new System.Drawing.Point(495, 12);
             this.DeviceInfo.Multiline = true;
             this.DeviceInfo.Name = "DeviceInfo";
-            this.DeviceInfo.Size = new System.Drawing.Size(447, 312);
+            this.DeviceInfo.Size = new System.Drawing.Size(447, 347);
             this.DeviceInfo.TabIndex = 1;
             // 
             // DisableBt
