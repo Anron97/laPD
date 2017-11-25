@@ -9,24 +9,24 @@ namespace DriversOnTheStorm
 {
     class DeviceController
     {
-        private ManagementObjectSearcher _searcher;
+        private ManagementObjectSearcher _controller;
         private static readonly SelectQuery _query = new SelectQuery("SELECT * FROM Win32_PnPEntity");
         private static readonly ManagementScope _scope = new ManagementScope();
 
         public DeviceController()
         {
-            _searcher = new ManagementObjectSearcher(_scope, _query);
+            _controller = new ManagementObjectSearcher(_scope, _query);
         }
 
         public List<Device> GetDevices()
         {
             List<Device> devices = new List<Device>();
-            foreach (ManagementObject device in _searcher.Get())
+            foreach (ManagementObject device in _controller.Get())
             {
                 string[] driverInfo = GetDriverInfo(device);
                 devices.Add(new Device(device["Name"]?.ToString(),
                     device["ClassGuid"]?.ToString(),
-                    device["HardwareID"] == null ? "" : String.Join("\n", (string[])device["HardwareID"]),
+                    device["HardwareID"] == null ? "" : String.Join("\n", (string[]) device["HardwareID"]),
                     device["Manufacturer"]?.ToString(),
                     driverInfo[0],
                     device["Caption"]?.ToString(),

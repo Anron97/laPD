@@ -28,49 +28,49 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.DeviceList = new System.Windows.Forms.ListView();
+            this.DeviceInfo = new System.Windows.Forms.TextBox();
+            this.DisableBt = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // listView1
+            // DeviceList
             // 
-            this.listView1.Location = new System.Drawing.Point(0, -1);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(372, 474);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.DeviceList.GridLines = true;
+            this.DeviceList.Location = new System.Drawing.Point(0, -1);
+            this.DeviceList.Name = "DeviceList";
+            this.DeviceList.Size = new System.Drawing.Size(473, 474);
+            this.DeviceList.TabIndex = 0;
+            this.DeviceList.UseCompatibleStateImageBehavior = false;
+            this.DeviceList.MouseClick += new System.Windows.Forms.MouseEventHandler(this.DeviceList_MouseClick);
             // 
-            // textBox1
+            // DeviceInfo
             // 
-            this.textBox1.Location = new System.Drawing.Point(378, -1);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(384, 312);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.DeviceInfo.Location = new System.Drawing.Point(495, -1);
+            this.DeviceInfo.Multiline = true;
+            this.DeviceInfo.Name = "DeviceInfo";
+            this.DeviceInfo.Size = new System.Drawing.Size(447, 312);
+            this.DeviceInfo.TabIndex = 1;
             // 
-            // button1
+            // DisableBt
             // 
-            this.button1.Location = new System.Drawing.Point(630, 412);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(127, 39);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Disable";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.DisableBt.Location = new System.Drawing.Point(786, 390);
+            this.DisableBt.Name = "DisableBt";
+            this.DisableBt.Size = new System.Drawing.Size(156, 55);
+            this.DisableBt.TabIndex = 2;
+            this.DisableBt.Text = "Disable";
+            this.DisableBt.UseVisualStyleBackColor = true;
+            this.DisableBt.Click += new System.EventHandler(this.DisableB_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(769, 474);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.listView1);
+            this.ClientSize = new System.Drawing.Size(983, 474);
+            this.Controls.Add(this.DisableBt);
+            this.Controls.Add(this.DeviceInfo);
+            this.Controls.Add(this.DeviceList);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -78,9 +78,9 @@
 
         #endregion
 
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ListView DeviceList;
+        private System.Windows.Forms.TextBox DeviceInfo;
+        private System.Windows.Forms.Button DisableBt;
     }
 }
 

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Management;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -18,7 +19,8 @@ namespace DriversOnTheStorm
         public string DevicePath { get; set; }
         public bool Status { get; set; }
 
-        public Device(string name, string classGuid, string hardwareId, string manufacturer, string description, string provider, string sysPath, string devicePath, bool status)
+        public Device(string name, string classGuid, string hardwareId, string manufacturer, string description,
+            string provider, string sysPath, string devicePath, bool status)
         {
             Name = name;
             ClassGuid = classGuid;
@@ -31,6 +33,11 @@ namespace DriversOnTheStorm
             Status = status;
         }
 
-
+        public void ChangeConnection(string method)
+        {
+            var device = new ManagementObjectSearcher("SELECT * FROM Win32_PNPEntity").Get().OfType<ManagementObject>()
+                .FirstOrDefault(x => x["DeviceID"].ToString().Equals(DevicePath));
+            device.InvokeMethod(method, new object[] {false});
+        }
     }
 }
