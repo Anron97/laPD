@@ -67,12 +67,13 @@
             // 
             // pingBt
             // 
-            this.pingBt.Location = new System.Drawing.Point(12, 420);
+            this.pingBt.Location = new System.Drawing.Point(12, 414);
             this.pingBt.Name = "pingBt";
-            this.pingBt.Size = new System.Drawing.Size(111, 23);
+            this.pingBt.Size = new System.Drawing.Size(111, 29);
             this.pingBt.TabIndex = 1;
             this.pingBt.Text = "Ping";
             this.pingBt.UseVisualStyleBackColor = true;
+            this.pingBt.Click += new System.EventHandler(this.pingBt_Click);
             // 
             // Form1
             // 
