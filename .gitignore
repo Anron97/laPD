@@ -8,3 +8,25 @@ DriversOnTheStorm/\.vs/
 DriversOnTheStorm/DriversOnTheStorm/bin/Debug/
 
 DriversOnTheStorm/DriversOnTheStorm/obj/Release/
+
+*.ide
+
+WiFi_Networks/\.vs/WiFi_Networks/v15/\.suo
+
+*.lock
+
+*.ide-shm
+
+WiFi_Networks/\.vs/WiFi_Networks/v15/Server/sqlite3/storage\.ide-wal
+
+WiFi_Networks/packages/managedwifi\.1\.1\.0/lib/net20/ManagedWifi\.dll
+
+*.nupkg
+
+*.dll
+
+*.cache
+
+WiFi_Networks/WiFi_Networks/obj/Debug/
+
+WiFi_Networks/WiFi_Networks/Properties/AssemblyInfo\.cs
