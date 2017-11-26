@@ -6,7 +6,7 @@ using SimpleWifi;
 
 namespace WiFi_Networks
 {
-    class WifiNetwork
+    public class WifiNetwork
     {
         public string Name { get; set; }
         public string SignalStrength { get; set; }

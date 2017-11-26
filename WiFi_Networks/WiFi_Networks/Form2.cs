@@ -12,24 +12,26 @@ namespace WiFi_Networks
 {
     public partial class Form2 : Form
     {
-        public Form2()
+        private readonly WifiNetwork _network;
+        public Form2(WifiNetwork network)
         {
+            this._network = network;
             InitializeComponent();
+            textBox.Text = network.Description + network.GetBssIds();
+            if (network.IsConnected)
+            {
+                PasswordInput.Enabled = false;
+                connect.Enabled = false;
+            }
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        public void ConnectBt_MouseClick(object sender, EventArgs e)
         {
-
-        }
-
-        private void Form2_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
+            if (PasswordInput.Text.Length > 0 && _network.Connect(PasswordInput.Text))
+            {
+                PasswordInput.Enabled = false;
+                connect.Enabled = false;
+            }
         }
     }
 }

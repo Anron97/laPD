@@ -28,50 +28,51 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.NetworkList = new System.Windows.Forms.ListView();
             this.Signal = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Network_name = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
-            // listView1
+            // NetworkList
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.NetworkList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Signal,
             this.Network_name});
-            this.listView1.Location = new System.Drawing.Point(10, 12);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(363, 431);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.NetworkList.FullRowSelect = true;
+            this.NetworkList.Location = new System.Drawing.Point(10, 12);
+            this.NetworkList.Name = "NetworkList";
+            this.NetworkList.Size = new System.Drawing.Size(299, 431);
+            this.NetworkList.TabIndex = 0;
+            this.NetworkList.UseCompatibleStateImageBehavior = false;
+            this.NetworkList.View = System.Windows.Forms.View.Details;
+            this.NetworkList.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.NetworkList_DoubleMouseClick);
             // 
             // Signal
             // 
-            this.Signal.DisplayIndex = 0;
             this.Signal.Text = "Signal";
             // 
             // Network_name
             // 
-            this.Network_name.DisplayIndex = 1;
             this.Network_name.Text = "Name";
             this.Network_name.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.Network_name.Width = 300;
+            this.Network_name.Width = 150;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(385, 455);
-            this.Controls.Add(this.listView1);
+            this.ClientSize = new System.Drawing.Size(313, 455);
+            this.Controls.Add(this.NetworkList);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView NetworkList;
         private System.Windows.Forms.ColumnHeader Signal;
         private System.Windows.Forms.ColumnHeader Network_name;
     }
