@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using SimpleWifi;
 
 namespace WiFi_Networks
 {
@@ -15,7 +15,7 @@ namespace WiFi_Networks
         public bool IsSecured { get; set; }
         public bool IsConnected { get; set; }
 
-        public WiFiNetwork(string name, string signalStrength, string description, List<string> bssId, bool isSecured, bool isConnected)
+        public WifiNetwork(string name, string signalStrength, string description, List<string> bssId, bool isSecured, bool isConnected)
         {
             Name = name;
             SignalStrength = signalStrength;
