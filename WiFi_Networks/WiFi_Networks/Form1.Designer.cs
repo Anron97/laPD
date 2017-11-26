@@ -33,6 +33,7 @@
             this.Signal = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Network_name = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.pingBt = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // NetworkList
@@ -43,7 +44,7 @@
             this.NetworkList.FullRowSelect = true;
             this.NetworkList.Location = new System.Drawing.Point(10, 12);
             this.NetworkList.Name = "NetworkList";
-            this.NetworkList.Size = new System.Drawing.Size(299, 431);
+            this.NetworkList.Size = new System.Drawing.Size(299, 396);
             this.NetworkList.TabIndex = 0;
             this.NetworkList.UseCompatibleStateImageBehavior = false;
             this.NetworkList.View = System.Windows.Forms.View.Details;
@@ -64,11 +65,21 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // pingBt
+            // 
+            this.pingBt.Location = new System.Drawing.Point(12, 420);
+            this.pingBt.Name = "pingBt";
+            this.pingBt.Size = new System.Drawing.Size(111, 23);
+            this.pingBt.TabIndex = 1;
+            this.pingBt.Text = "Ping";
+            this.pingBt.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(313, 455);
+            this.Controls.Add(this.pingBt);
             this.Controls.Add(this.NetworkList);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -83,6 +94,7 @@
         private System.Windows.Forms.ColumnHeader Signal;
         private System.Windows.Forms.ColumnHeader Network_name;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button pingBt;
     }
 }
 
