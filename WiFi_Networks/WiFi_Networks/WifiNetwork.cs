@@ -31,8 +31,7 @@ namespace WiFi_Networks
             AccessPoint accessPoint = wifi.GetAccessPoints().FirstOrDefault(x => x.Name.Equals(Name));
             if (accessPoint != null)
             {
-                AuthRequest authRequest = new AuthRequest(accessPoint);
-                authRequest.Password = password;
+                AuthRequest authRequest = new AuthRequest(accessPoint) {Password = password};
                 return accessPoint.Connect(authRequest);
             }
             return false;

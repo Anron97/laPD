@@ -18,6 +18,7 @@ namespace WiFi_Networks
         public Form1()
         {
             InitializeComponent();
+            timer1.Enabled = true;
         }
 
         private void Form1_Load(object sender, EventArgs e)

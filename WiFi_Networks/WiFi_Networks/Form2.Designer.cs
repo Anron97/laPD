@@ -28,12 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.textBox = new System.Windows.Forms.TextBox();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.PasswordInput = new System.Windows.Forms.TextBox();
             this.Password = new System.Windows.Forms.Label();
             this.connect = new System.Windows.Forms.Button();
+            this.ErrorL = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // textBox
@@ -45,12 +44,6 @@
             this.textBox.Size = new System.Drawing.Size(271, 145);
             this.textBox.TabIndex = 0;
             this.textBox.TabStop = false;
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // PasswordInput
             // 
@@ -79,11 +72,23 @@
             this.connect.UseVisualStyleBackColor = true;
             this.connect.Click += new System.EventHandler(this.ConnectBt_MouseClick);
             // 
+            // ErrorL
+            // 
+            this.ErrorL.AutoSize = true;
+            this.ErrorL.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ErrorL.ForeColor = System.Drawing.Color.Red;
+            this.ErrorL.Location = new System.Drawing.Point(29, 215);
+            this.ErrorL.Name = "ErrorL";
+            this.ErrorL.Size = new System.Drawing.Size(66, 25);
+            this.ErrorL.TabIndex = 5;
+            this.ErrorL.Text = "Error!";
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(295, 261);
+            this.Controls.Add(this.ErrorL);
             this.Controls.Add(this.connect);
             this.Controls.Add(this.Password);
             this.Controls.Add(this.PasswordInput);
@@ -98,9 +103,9 @@
         #endregion
 
         private System.Windows.Forms.TextBox textBox;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.TextBox PasswordInput;
         private System.Windows.Forms.Label Password;
         private System.Windows.Forms.Button connect;
+        private System.Windows.Forms.Label ErrorL;
     }
 }

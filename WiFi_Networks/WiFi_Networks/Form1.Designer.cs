@@ -28,9 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.NetworkList = new System.Windows.Forms.ListView();
             this.Signal = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Network_name = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // NetworkList
@@ -57,6 +59,11 @@
             this.Network_name.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Network_name.Width = 150;
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -75,6 +82,7 @@
         private System.Windows.Forms.ListView NetworkList;
         private System.Windows.Forms.ColumnHeader Signal;
         private System.Windows.Forms.ColumnHeader Network_name;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 
