@@ -9,13 +9,13 @@ namespace DriversOnTheStorm
 {
     class DeviceController
     {
-        private ManagementObjectSearcher _controller;
-        private static readonly SelectQuery _query = new SelectQuery("SELECT * FROM Win32_PnPEntity");
-        private static readonly ManagementScope _scope = new ManagementScope();
+        private readonly ManagementObjectSearcher _controller;
+        private static readonly SelectQuery Query = new SelectQuery("SELECT * FROM Win32_PnPEntity");
+        private static readonly ManagementScope Scope = new ManagementScope();
 
         public DeviceController()
         {
-            _controller = new ManagementObjectSearcher(_scope, _query);
+            _controller = new ManagementObjectSearcher(Scope, Query);
         }
 
         public List<Device> GetDevices()

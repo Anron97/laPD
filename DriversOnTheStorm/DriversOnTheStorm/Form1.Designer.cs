@@ -44,6 +44,7 @@
             this.DeviceList.TileSize = new System.Drawing.Size(470, 36);
             this.DeviceList.UseCompatibleStateImageBehavior = false;
             this.DeviceList.View = System.Windows.Forms.View.Tile;
+            this.DeviceList.SelectedIndexChanged += new System.EventHandler(this.DeviceList_SelectedIndexChanged);
             this.DeviceList.MouseClick += new System.Windows.Forms.MouseEventHandler(this.DeviceList_MouseClick);
             // 
             // DeviceInfo

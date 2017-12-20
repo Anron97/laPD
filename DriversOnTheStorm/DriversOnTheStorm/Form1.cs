@@ -53,5 +53,10 @@ namespace DriversOnTheStorm
             device.Status = !device.Status;
             DisableBt.Text = device.Status ? "Disable" : "Enable";
         }
+
+        private void DeviceList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
